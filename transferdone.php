@@ -3,7 +3,7 @@ include "database.php";
 $sql="INSERT INTO `all_transfers`(`from_id`, `to_id`, `credit_transfer`) VALUES ('" . $_POST['user1_name'] . "','" . $_POST['user2_name'] . "','" . $_POST['credit_amount'] . "')";
 $conn->query($sql);
 
-$var3=$_POST["usercredit1"] - $_POST["credit_amount"] + 11;
+$var3=$_POST["usercredit1"] - $_POST["credit_amount"] ;
 $sql="UPDATE `users` SET `credit`='". $var3 . "'WHERE `id`='".$_POST['userid1']."'" ;
 $conn->query($sql);
 
